@@ -1,0 +1,19 @@
+{
+  "seed": 6304,
+  "dataset": "STL10",
+  "img_size": 224,
+  "n_test_subset": 500,
+  "head": {"max_epochs": 50, "lr": 0.001, "weight_decay": 0.0001, "patience": 5, "batch_size": 256, "val_frac": 0.2},
+  "clip": {"model": "ViT-B-32", "pretrained": "openai", "prompt": "a photo of a {}."},
+  "color": {"hue_shift": 0.5},
+  "translation": {"displacements": [8, 16, 32], "directions": ["right", "left", "down", "up"]},
+  "patch": {"grid": 4},
+  "cue_conflict": {
+    "pairs": [["airplane", "horse"], ["bird", "car"], ["cat", "ship"], ["deer", "truck"], ["dog", "monkey"]],
+    "n_generate_per_cell": 40,
+    "n_keep_per_cell": 25,
+    "style_alpha": 1.0,
+    "reject": {"min_edge_corr": 0.2, "min_gray_std": 0.05, "max_saturated_frac": 0.5, "require_closer_to_style": true}
+  },
+  "tsne": {"perplexity": 30, "n_iter": 1000, "metric": "cosine", "transforms": ["grayscale", "cue_conflict", "translate_right_32", "patch_shuffle"]}
+}

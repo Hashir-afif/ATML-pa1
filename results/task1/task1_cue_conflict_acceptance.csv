@@ -1,0 +1,11 @@
+pair,direction,generated,accepted,kept,rejected
+airplane/horse,A_shape_B_texture,40,40,25,0
+airplane/horse,B_shape_A_texture,40,37,25,3
+bird/car,A_shape_B_texture,40,39,25,1
+bird/car,B_shape_A_texture,40,39,25,1
+cat/ship,A_shape_B_texture,40,40,25,0
+cat/ship,B_shape_A_texture,40,39,25,1
+deer/truck,A_shape_B_texture,40,39,25,1
+deer/truck,B_shape_A_texture,40,39,25,1
+dog/monkey,A_shape_B_texture,40,38,25,2
+dog/monkey,B_shape_A_texture,40,39,25,1

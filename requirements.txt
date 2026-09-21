@@ -1,0 +1,18 @@
+# Python 3.12. Install with uv (see README):
+#   uv venv --python 3.12
+#   uv pip install -r requirements.txt --index-url https://download.pytorch.org/whl/cu128 --extra-index-url https://pypi.org/simple
+# The CUDA 12.8 wheels were verified on an RTX 4060 Laptop GPU (driver 596.36).
+torch==2.11.0+cu128
+torchvision==0.26.0+cu128
+open-clip-torch==3.3.0
+numpy==2.5.2
+pillow==12.3.0
+scikit-learn==1.9.1
+scipy==1.18.1
+pandas==3.0.6
+matplotlib==3.11.2
+tqdm==4.70.1
+pyyaml==6.0.3
+jupyter==1.1.1
+ipykernel==7.3.0
+nbconvert==7.17.1

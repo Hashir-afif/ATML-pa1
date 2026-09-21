@@ -1,0 +1,149 @@
+{
+ "intervention": "grayscale",
+ "metrics": {
+  "resnet50_head": {
+   "top1_acc": 0.948,
+   "macro_f1": 0.9482610131102784,
+   "mean_max_conf": 0.9182605743408203,
+   "n": 500,
+   "delta_acc_vs_clean": -0.02200000000000002,
+   "delta_macro_f1_vs_clean": -0.021730485377449704,
+   "delta_conf_vs_clean": 0.0023816823959350586,
+   "consistency": 0.952,
+   "per_class_accuracy": {
+    "airplane": 0.94,
+    "bird": 0.92,
+    "car": 0.98,
+    "cat": 0.94,
+    "deer": 0.96,
+    "dog": 0.9,
+    "horse": 0.96,
+    "monkey": 0.92,
+    "ship": 0.98,
+    "truck": 0.98
+   },
+   "frac_confident_errors_ge_0.9": 0.01,
+   "mean_conf_on_errors": 0.6789583563804626,
+   "predicted_class_histogram": {
+    "airplane": 47,
+    "bird": 48,
+    "car": 50,
+    "cat": 51,
+    "deer": 56,
+    "dog": 47,
+    "horse": 50,
+    "monkey": 46,
+    "ship": 53,
+    "truck": 52
+   }
+  },
+  "vit_b16_head": {
+   "top1_acc": 0.946,
+   "macro_f1": 0.946290446428924,
+   "mean_max_conf": 0.9541899561882019,
+   "n": 500,
+   "delta_acc_vs_clean": -0.02200000000000002,
+   "delta_macro_f1_vs_clean": -0.02179600113109592,
+   "delta_conf_vs_clean": -0.010445833206176758,
+   "consistency": 0.976,
+   "per_class_accuracy": {
+    "airplane": 0.92,
+    "bird": 0.96,
+    "car": 0.96,
+    "cat": 0.98,
+    "deer": 0.96,
+    "dog": 0.88,
+    "horse": 0.9,
+    "monkey": 0.96,
+    "ship": 0.96,
+    "truck": 0.98
+   },
+   "frac_confident_errors_ge_0.9": 0.016,
+   "mean_conf_on_errors": 0.7135533690452576,
+   "predicted_class_histogram": {
+    "airplane": 48,
+    "bird": 48,
+    "car": 48,
+    "cat": 51,
+    "deer": 57,
+    "dog": 48,
+    "horse": 47,
+    "monkey": 49,
+    "ship": 52,
+    "truck": 52
+   }
+  },
+  "clip_head": {
+   "top1_acc": 0.928,
+   "macro_f1": 0.9279045968879764,
+   "mean_max_conf": 0.13781441748142242,
+   "n": 500,
+   "delta_acc_vs_clean": -0.039999999999999925,
+   "delta_macro_f1_vs_clean": -0.04005309665215906,
+   "delta_conf_vs_clean": -0.003899022936820984,
+   "consistency": 0.938,
+   "per_class_accuracy": {
+    "airplane": 0.98,
+    "bird": 0.96,
+    "car": 0.98,
+    "cat": 0.92,
+    "deer": 0.96,
+    "dog": 0.8,
+    "horse": 0.92,
+    "monkey": 0.88,
+    "ship": 0.94,
+    "truck": 0.94
+   },
+   "frac_confident_errors_ge_0.9": 0.0,
+   "mean_conf_on_errors": 0.12246163934469223,
+   "predicted_class_histogram": {
+    "airplane": 52,
+    "bird": 51,
+    "car": 52,
+    "cat": 51,
+    "deer": 59,
+    "dog": 41,
+    "horse": 51,
+    "monkey": 46,
+    "ship": 48,
+    "truck": 49
+   }
+  },
+  "clip_zeroshot": {
+   "top1_acc": 0.908,
+   "macro_f1": 0.9062903250549414,
+   "mean_max_conf": 0.9160520434379578,
+   "n": 500,
+   "delta_acc_vs_clean": -0.028000000000000025,
+   "delta_macro_f1_vs_clean": -0.029255928968693445,
+   "delta_conf_vs_clean": -0.008569955825805664,
+   "consistency": 0.922,
+   "per_class_accuracy": {
+    "airplane": 0.96,
+    "bird": 0.98,
+    "car": 0.98,
+    "cat": 0.74,
+    "deer": 0.96,
+    "dog": 0.7,
+    "horse": 0.98,
+    "monkey": 0.86,
+    "ship": 0.98,
+    "truck": 0.94
+   },
+   "frac_confident_errors_ge_0.9": 0.012,
+   "mean_conf_on_errors": 0.6479600071907043,
+   "predicted_class_histogram": {
+    "airplane": 49,
+    "bird": 56,
+    "car": 52,
+    "cat": 39,
+    "deer": 63,
+    "dog": 37,
+    "horse": 57,
+    "monkey": 47,
+    "ship": 51,
+    "truck": 49
+   }
+  }
+ }
+}

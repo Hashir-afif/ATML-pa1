@@ -1,0 +1,21 @@
+# Environments
+.venv/
+venv/
+
+# Raw datasets and large caches (never commit; see README for how to regenerate)
+data/
+task1/cache/
+task1/data/
+checkpoints/
+wandb/
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Model weights and tensors
+*.pt
+*.pth
+*.npy
+!task1/results/cue_conflicts/kept_candidate_rows.npy
