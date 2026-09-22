@@ -1,0 +1,30 @@
+# Shared Task 2 protocol (manual section 2). Every method config is merged on top of this file.
+seed: 6304
+data:
+  dataset: PACS (Hugging Face mirror flwrlabs/pacs, sha256 4fc041ee...5ff5)
+  sources: [photo, art_painting, cartoon]
+  target: sketch                  # all 3929 images, unlabelled during training
+  split_file: shared/splits/pacs_sketch_seed6304.json
+  val_frac: 0.2                   # stratified, per source domain
+  resize: 256
+  crop: 224                       # random crop + h-flip for training, centre crop for evaluation
+  normalization: ImageNet (ResNet18_Weights.IMAGENET1K_V1)
+model:
+  arch: resnet18
+  weights: IMAGENET1K_V1
+  num_classes: 7
+  fine_tune: full
+  freeze_bn_running_stats: true   # BN gamma/beta stay trainable
+train:
+  max_epochs: 30
+  epoch_definition: ceil(largest source-train domain / n_per_source) updates
+  optimizer: AdamW
+  lr: 1.0e-4
+  weight_decay: 1.0e-4
+  patience: 5                     # epochs without mean source-val macro-F1 improvement
+  selection_metric: mean_source_val_macro_f1
+  n_per_source: 8
+  n_target: 24                    # adaptation methods only
+  eval_batch_size: 256
+evaluation:
+  separability: {test_size: 0.3, C: 1.0, class_weight: balanced, features: 512-d pre-classifier}

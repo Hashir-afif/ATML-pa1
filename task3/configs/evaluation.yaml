@@ -1,0 +1,5 @@
+# Task 3 diagnostic settings (manual section 3, step 4)
+seed: 6304
+source_domain_separability: {test_size: 0.3, C: 1.0, multinomial: true, groups: [photo, art_painting, cartoon]}
+sharpness: {per_source_domain: 32, radius: 0.05, split: source validation, mode: eval}
+controlled_study: {parameter: lambda_dg, values: [0.1, 1.0, 10.0]}

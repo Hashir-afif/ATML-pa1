@@ -1,0 +1,6 @@
+config,run,method,best_epoch,epochs_run,stopped_early,best_mean_val_macro_f1,train_minutes
+erm,"task2/source_only (reused, not retrained)",erm,6,11,True,0.9316911755048768,2.23673179546992
+dan_dg,dan_dg_lambda1,dan_dg,1,6,True,0.05066996495567924,1.5364832878112793
+sam,sam_rho0.05,sam,5,10,True,0.9577923324821723,3.8173267960548403
+dan_dg_lambda0.1,dan_dg_lambda0.1,dan_dg,5,10,True,0.9541999548355329,2.795993435382843
+dan_dg_lambda10,dan_dg_lambda10,dan_dg,1,6,True,0.05066996495567924,1.6729896823565165

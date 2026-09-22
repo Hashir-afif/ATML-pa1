@@ -1,0 +1,8 @@
+model,task,target_images_used,sketch_acc,sketch_macro_f1,source_val_mean_acc,lambda,separability_note
+ERM = Task 2 Source-only (shared),2/3,False,0.6747263934843472,0.671835858317271,0.9342351336642332,,
+"DAN λ=0.1 (Task 2, target-aware)",2,True,0.7192669890557394,0.6632294315607805,0.9392883171199854,0.1,source-vs-Sketch: 0.964
+"DAN λ=1.0 (Task 2, target-aware)",2,True,0.6989055739373886,0.6372577795036477,0.943654985520145,1.0,source-vs-Sketch: 0.852
+"DAN λ=10.0 (Task 2, target-aware)",2,True,0.0407228302367014,0.0111798204241344,0.2165683713959568,10.0,source-vs-Sketch: 0.654
+"DAN-DG λ=0.1 (Task 3, target-free)",3,False,0.6459658946296768,0.6368622659437302,0.9528221833933672,0.1,3-way source: 0.814
+"DAN-DG λ=1.0 (Task 3, target-free)",3,False,0.04072283023670145,0.011179820424134438,0.2165683713959568,1.0,3-way source: 0.332
+"DAN-DG λ=10.0 (Task 3, target-free)",3,False,0.04072283023670145,0.011179820424134438,0.2165683713959568,10.0,3-way source: 0.382

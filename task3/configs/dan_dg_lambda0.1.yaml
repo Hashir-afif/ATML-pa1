@@ -1,0 +1,6 @@
+run_name: dan_dg_lambda0.1
+method: dan_dg
+controlled_study: true   # DAN-DG lambda study; the main comparison uses lambda_DG = 1
+dan_dg:
+  lambda_dg: 0.1
+  bandwidth_multipliers: [0.5, 1.0, 2.0]   # x median pairwise squared distance of each domain pair's combined batch

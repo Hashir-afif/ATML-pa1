@@ -1,0 +1,6 @@
+config,method,separability_acc,chance,groups,n_per_group,n_train,n_test,lbfgs_iterations,converged,seed,C,test_size,test_confusion
+erm,ERM,0.8870431893687708,0.3333333333333333,"['photo', 'art_painting', 'cartoon']",334,701,301,470,True,6304,1.0,0.3,"[[89, 9, 2], [14, 82, 4], [3, 2, 96]]"
+dan_dg,DAN-DG (λ=1),0.33222591362126247,0.3333333333333333,"['photo', 'art_painting', 'cartoon']",334,701,301,0,True,6304,1.0,0.3,"[[100, 0, 0], [100, 0, 0], [101, 0, 0]]"
+sam,SAM (ρ=0.05),0.8903654485049833,0.3333333333333333,"['photo', 'art_painting', 'cartoon']",334,701,301,289,True,6304,1.0,0.3,"[[85, 14, 1], [11, 87, 2], [4, 1, 96]]"
+dan_dg_lambda0.1,DAN-DG (λ=0.1),0.813953488372093,0.3333333333333333,"['photo', 'art_painting', 'cartoon']",334,701,301,394,True,6304,1.0,0.3,"[[84, 12, 4], [13, 77, 10], [10, 7, 84]]"
+dan_dg_lambda10,DAN-DG (λ=10),0.38205980066445183,0.3333333333333333,"['photo', 'art_painting', 'cartoon']",334,701,301,3,True,6304,1.0,0.3,"[[53, 0, 47], [65, 0, 35], [39, 0, 62]]"

@@ -1,0 +1,4 @@
+run_name: erm
+method: erm
+# Not trained in Task 3: the Task 2 Source-only checkpoint is loaded unchanged (manual section 3).
+checkpoint_dir: task2/checkpoints/source_only

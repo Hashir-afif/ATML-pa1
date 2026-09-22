@@ -1,0 +1,4 @@
+run_name: sam_rho0.05
+method: sam
+sam:
+  rho: 0.05     # standard (non-adaptive) SAM; AdamW with the ERM lr / weight decay as base optimiser

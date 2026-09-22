@@ -1,0 +1,14 @@
+{
+ "checked": [
+  "00_verify_protocol.ipynb",
+  "01_train_methods.ipynb",
+  "02_source_diagnostics.ipynb",
+  "task3\\methods\\dan_dg.py",
+  "task3\\methods\\erm.py",
+  "task3\\methods\\sam.py",
+  "task3\\methods\\__init__.py",
+  "shared\\training.py"
+ ],
+ "sketch_loader_calls_found": [],
+ "ok": true
+}

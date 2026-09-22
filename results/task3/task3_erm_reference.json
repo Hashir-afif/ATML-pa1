@@ -1,0 +1,13 @@
+{
+ "checkpoint": "task2/checkpoints/source_only/best.pt",
+ "checkpoint_sha256": "6245ad4a87c63c62c1aa6e299212a81c1717fd73159485ced5ac2157798eb825",
+ "best_epoch": 6,
+ "best_mean_val_macro_f1": 0.9316911755048768,
+ "uses_target_images": false,
+ "train_config_equals_task3_base": {
+  "seed": true,
+  "data": true,
+  "model": true,
+  "train": true
+ }
+}

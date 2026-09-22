@@ -1,0 +1,5 @@
+config,method,positive_flips,negative_flips,both_correct,both_wrong,net_change
+dan_dg,DAN-DG (λ=1),31,2522,129,1247,-2491
+sam,SAM (ρ=0.05),213,504,2147,1065,-291
+dan_dg_lambda0.1,DAN-DG (λ=0.1),323,436,2215,955,-113
+dan_dg_lambda10,DAN-DG (λ=10),31,2522,129,1247,-2491

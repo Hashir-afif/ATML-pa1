@@ -1,0 +1,9 @@
+config,method,kind,class,erm_acc,method_acc,change,erm_top_confusion,method_top_confusion
+dan_dg,DAN-DG (λ=1),largest_improvement,person,0.80625,1.0,0.19374999999999998,giraffe (19),dog (0)
+dan_dg,DAN-DG (λ=1),largest_degradation,elephant,0.9675675675675676,0.0,-0.9675675675675676,giraffe (10),person (740)
+sam,SAM (ρ=0.05),largest_improvement,dog,0.17357512953367876,0.2823834196891192,0.10880829015544041,elephant (305),elephant (480)
+sam,SAM (ρ=0.05),largest_degradation,person,0.80625,0.3875,-0.41875,giraffe (19),elephant (87)
+dan_dg_lambda0.1,DAN-DG (λ=0.1),largest_improvement,dog,0.17357512953367876,0.4883419689119171,0.31476683937823835,elephant (305),elephant (228)
+dan_dg_lambda0.1,DAN-DG (λ=0.1),largest_degradation,person,0.80625,0.6125,-0.19374999999999998,giraffe (19),elephant (42)
+dan_dg_lambda10,DAN-DG (λ=10),largest_improvement,person,0.80625,1.0,0.19374999999999998,giraffe (19),dog (0)
+dan_dg_lambda10,DAN-DG (λ=10),largest_degradation,elephant,0.9675675675675676,0.0,-0.9675675675675676,giraffe (10),person (740)
