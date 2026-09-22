@@ -19,3 +19,17 @@ __pycache__/
 *.pth
 *.npy
 !task1/results/cue_conflicts/kept_candidate_rows.npy
+
+# Task 2/3 checkpoints, caches and smoke-test outputs
+task2/checkpoints/
+task2/cache/
+task2/results/_smoke/
+task2/results/_partial_nb/
+task2/results/run_*.log
+
+# Task 3 checkpoints, caches, smoke outputs, run logs
+task3/checkpoints/
+task3/cache/
+task3/results/_smoke/
+task3/results/_partial_nb/
+task3/results/run_*.log

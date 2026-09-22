@@ -1,0 +1,7 @@
+config,method,disc_lr,epochs_run,max_epoch_domain_loss,min_epoch_val_macro_f1,best_val_macro_f1,criterion1_domain_loss_below_2,criterion2_val_f1_never_below_0.5,stable
+dann_discbn,DANN (disc BN),0.0001,11,1.1845867080891386,0.8844229630543881,0.944272681428069,True,True,True
+cdan_discbn,CDAN (disc BN),0.0001,9,0.7776600586607101,0.837751385537119,0.9391131901370331,True,True,True
+dann_disclr10,DANN (disc lr×10),0.001,13,6951.307620583189,0.04541155956331928,0.9484263219328812,False,False,False
+cdan_disclr10,CDAN (disc lr×10),0.001,11,0.6932786642236912,0.873566960169016,0.9428255121092531,True,True,True
+dann,DANN (as specified),0.0001,6,198942246982.75137,0.02256571345799945,0.4417540718543731,False,False,False
+cdan,CDAN (as specified),,7,1.254314439093813,0.05066996495567924,0.9026014338212981,True,False,False

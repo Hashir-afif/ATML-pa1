@@ -1,0 +1,5 @@
+run_name: dan_lambda1
+method: dan
+dan:
+  lambda_mmd: 1
+  bandwidth_multipliers: [0.5, 1.0, 2.0]   # x median pairwise squared distance of the combined batch

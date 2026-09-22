@@ -1,0 +1,11 @@
+config,method,separability_acc,chance,groups,n_per_group,n_train,n_test,lbfgs_iterations,converged,seed,C,test_size,test_confusion
+source_only,Source-only,0.9972527472527473,0.5,"['source_val', 'target']",1213,1698,728,55,True,6304,1.0,0.3,"[[362, 2], [0, 364]]"
+dan,DAN (λ=1),0.8516483516483516,0.5,"['source_val', 'target']",1213,1698,728,219,True,6304,1.0,0.3,"[[320, 44], [64, 300]]"
+dann_discbn,DANN (disc BN),1.0,0.5,"['source_val', 'target']",1213,1698,728,39,True,6304,1.0,0.3,"[[364, 0], [0, 364]]"
+cdan_discbn,CDAN (disc BN),0.9972527472527473,0.5,"['source_val', 'target']",1213,1698,728,53,True,6304,1.0,0.3,"[[362, 2], [0, 364]]"
+dann_disclr10,DANN (disc lr×10),0.989010989010989,0.5,"['source_val', 'target']",1213,1698,728,168,True,6304,1.0,0.3,"[[357, 7], [1, 363]]"
+cdan_disclr10,CDAN (disc lr×10),0.9903846153846154,0.5,"['source_val', 'target']",1213,1698,728,351,True,6304,1.0,0.3,"[[360, 4], [3, 361]]"
+dann,DANN (as specified),0.9972527472527473,0.5,"['source_val', 'target']",1213,1698,728,133,True,6304,1.0,0.3,"[[362, 2], [0, 364]]"
+cdan,CDAN (as specified),0.9972527472527473,0.5,"['source_val', 'target']",1213,1698,728,66,True,6304,1.0,0.3,"[[363, 1], [1, 363]]"
+dan_lambda0.1,DAN (λ=0.1),0.9642857142857143,0.5,"['source_val', 'target']",1213,1698,728,172,True,6304,1.0,0.3,"[[351, 13], [13, 351]]"
+dan_lambda10,DAN (λ=10),0.6538461538461539,0.5,"['source_val', 'target']",1213,1698,728,78,True,6304,1.0,0.3,"[[250, 114], [138, 226]]"

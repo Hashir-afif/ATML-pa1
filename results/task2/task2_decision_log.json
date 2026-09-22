@@ -1,0 +1,42 @@
+{
+ "written": "2026-09-22, after all training finished and BEFORE any Sketch label was loaded",
+ "decisions": [
+  {
+   "decision": "DANN/CDAN with manual settings are unstable; add stabilised variants with discriminator lr x10 (1e-3), backbone/head unchanged",
+   "evidence": "source-side only: DANN attempt 1 epoch-1 domain loss 1459, val F1 0.07; 120-step diagnostic feature norm 24->64; CDAN (as specified) val F1 0.88,0.90,0.15,0.83,0.36,0.05",
+   "decided_by": "user choice among offered options (2026-09-22)"
+  },
+  {
+   "decision": "Stability criteria fixed before the stabilised runs finished: (1) epoch-mean domain loss < 2.0 in every epoch, (2) source-val mean macro-F1 >= 0.5 in every epoch",
+   "decided_by": "assistant"
+  },
+  {
+   "decision": "DANN (as specified) re-run to completion; partial attempt 1 kept in task2/checkpoints/_failed_attempts/dann_attempt1_diverged",
+   "decided_by": "assistant"
+  },
+  {
+   "decision": "Main comparison = Source-only, DAN (lambda=1), DANN (disc lr x10), CDAN (disc lr x10); as-specified DANN/CDAN reported as additional rows",
+   "note": "CDAN x10 passes both criteria. DANN x10 FAILS both (diverged from epoch 10; max domain loss ~6951) but its selected checkpoint (epoch 8, source-val F1 0.948) precedes the divergence; it is kept as the main DANN row and flagged unstable rather than iterating further fixes (to avoid tuning).",
+   "decided_by": "assistant (user delegated decisions while away)"
+  },
+  {
+   "decision": "DAN lambda=10 collapsed (uniform predictions from epoch 1); kept as-is because it is the controlled-study outcome",
+   "decided_by": "assistant"
+  },
+  {
+   "time": "2026-09-22 17:23:34",
+   "decision": "Post-evaluation investigation requested by the user. Root cause (source-side diagnostics only): unbounded growth of the 512-d feature scale (frozen backbone BN) lets the backbone beat an unnormalised ReLU discriminator; with disc lr x10 the discriminator's ReLU units all died (output exactly 0, |W1| frozen, domain loss exactly ln 2), so 'discriminator accuracy 0.51' was a dead discriminator, and later reactivation at alpha~0.92 produced the epoch-10 divergence.",
+   "fix_candidate_1": "BatchNorm1d in the discriminator hidden layer, discriminator lr = manual 1e-4 (configs dann_discbn, cdan_discbn)",
+   "fix_candidate_2_only_if_1_fails": "BatchNorm1d + discriminator lr x10",
+   "criteria": "unchanged: epoch-mean domain loss < 2.0 every epoch AND source-val mean macro-F1 >= 0.5 every epoch",
+   "main_row_rule": "fixed BEFORE the candidate runs finished: a candidate that passes both criteria replaces the disc-lr-x10 variant as the main DANN/CDAN row (it addresses the diagnosed cause with a smaller deviation: lr unchanged). All earlier variants stay reported. Never chosen by Sketch accuracy.",
+   "integrity_note": "Sketch labels were already read (2 logged reads) before this investigation; the investigation was triggered by source-side instability and uses no target labels, but it is a post-evaluation rerun and is reported as such.",
+   "decided_by": "assistant, on user's instruction to diagnose and fix"
+  },
+  {
+   "time": "2026-09-22 17:36:28",
+   "outcome": "dann_discbn and cdan_discbn passed both stability criteria (max epoch domain loss 1.18 / 0.78; min source-val F1 0.884 / 0.838) and became the main DANN/CDAN rows per the pre-set rule. Target evaluation (read #3) afterwards showed both are WORSE on Sketch than the disc-lr-x10 variants (DANN 65.2% vs 71.1%; CDAN 51.9% vs 76.6%). The main rows were NOT switched back, because that would be selection by target labels. All variants are reported.",
+   "decided_by": "pre-set rule"
+  }
+ ]
+}

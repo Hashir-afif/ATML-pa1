@@ -1,0 +1,6 @@
+run_name: dan_lambda0.1
+method: dan
+controlled_study: true              # DAN lambda study; main comparison uses lambda = 1
+dan:
+  lambda_mmd: 0.1
+  bandwidth_multipliers: [0.5, 1.0, 2.0]   # x median pairwise squared distance of the combined batch

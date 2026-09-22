@@ -1,0 +1,9 @@
+run_name: cdan
+method: cdan
+adversarial:
+  hidden: 256
+  dropout: 0.5
+  max_grl: 1.0                    # alpha(p) = max_grl * (2 / (1 + exp(-gamma p)) - 1)
+  gamma: 10.0
+  domain_loss_weight: 1.0
+  disc_lr_multiplier: 1.0          # manual setting (as specified); this run diverged, see README

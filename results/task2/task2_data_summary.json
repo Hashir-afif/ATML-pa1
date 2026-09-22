@@ -1,0 +1,65 @@
+{
+ "parquet_sha256": "4fc041ee92eec6043fe6e2859e8bdd138e5f958bc621afd153879812cbe65ff5",
+ "classes": [
+  "dog",
+  "elephant",
+  "giraffe",
+  "guitar",
+  "horse",
+  "house",
+  "person"
+ ],
+ "images_per_domain": {
+  "photo": 1670,
+  "art_painting": 2048,
+  "cartoon": 2344,
+  "sketch": 3929
+ },
+ "source_class_counts": {
+  "photo": {
+   "dog": 189,
+   "elephant": 202,
+   "giraffe": 182,
+   "guitar": 186,
+   "horse": 199,
+   "house": 280,
+   "person": 432
+  },
+  "art_painting": {
+   "dog": 379,
+   "elephant": 255,
+   "giraffe": 285,
+   "guitar": 184,
+   "horse": 201,
+   "house": 295,
+   "person": 449
+  },
+  "cartoon": {
+   "dog": 389,
+   "elephant": 457,
+   "giraffe": 346,
+   "guitar": 135,
+   "horse": 324,
+   "house": 288,
+   "person": 405
+  }
+ },
+ "split_file": "shared/splits/pacs_sketch_seed6304.json",
+ "split_seed": 6304,
+ "split_sizes": {
+  "photo": {
+   "train": 1336,
+   "val": 334
+  },
+  "art_painting": {
+   "train": 1638,
+   "val": 410
+  },
+  "cartoon": {
+   "train": 1875,
+   "val": 469
+  }
+ },
+ "target_images": 3929,
+ "updates_per_epoch": 235
+}

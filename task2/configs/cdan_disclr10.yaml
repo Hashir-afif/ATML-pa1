@@ -1,0 +1,11 @@
+run_name: cdan_disclr10
+method: cdan
+# Stabilised variant (user decision 2026-09-22): only the discriminator's learning rate is 10x (1e-3).
+# Backbone/head settings are identical to every other run. Chosen from source-side evidence only.
+adversarial:
+  hidden: 256
+  dropout: 0.5
+  max_grl: 1.0
+  gamma: 10.0
+  domain_loss_weight: 1.0
+  disc_lr_multiplier: 10.0

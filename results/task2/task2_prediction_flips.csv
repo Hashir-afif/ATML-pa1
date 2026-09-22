@@ -1,0 +1,10 @@
+config,method,positive_flips,negative_flips,both_correct,both_wrong,net_change
+dan,DAN (λ=1),609,514,2137,669,95
+dann_discbn,DANN (disc BN),545,635,2016,733,-90
+cdan_discbn,CDAN (disc BN),526,1140,1511,752,-614
+dann_disclr10,DANN (disc lr×10),490,347,2304,788,143
+cdan_disclr10,CDAN (disc lr×10),672,313,2338,606,359
+dann,DANN (as specified),143,1492,1159,1135,-1349
+cdan,CDAN (as specified),746,1337,1314,532,-591
+dan_lambda0.1,DAN (λ=0.1),570,395,2256,708,175
+dan_lambda10,DAN (λ=10),31,2522,129,1247,-2491

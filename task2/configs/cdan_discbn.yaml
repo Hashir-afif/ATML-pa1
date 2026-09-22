@@ -1,0 +1,12 @@
+run_name: cdan_discbn
+method: cdan
+# Post-evaluation fix (2026-09-22): BatchNorm1d in the discriminator's hidden layer; discriminator lr = manual (1e-4).
+# Motivated only by source-side training diagnostics (feature-norm growth, dead discriminator ReLUs).
+adversarial:
+  hidden: 256
+  dropout: 0.5
+  max_grl: 1.0
+  gamma: 10.0
+  domain_loss_weight: 1.0
+  disc_lr_multiplier: 1.0
+  disc_batchnorm: true

@@ -1,0 +1,11 @@
+config,run,method,uses_target_images,best_epoch,epochs_run,stopped_early,best_mean_val_macro_f1,train_minutes
+source_only,source_only,source_only,False,6,11,True,0.9316911755048768,2.23673179546992
+dan,dan_lambda1,dan,True,5,10,True,0.9428404102289094,4.0937925736109415
+dann_discbn,dann_discbn,dann,True,6,11,True,0.944272681428069,4.589157919089
+cdan_discbn,cdan_discbn,cdan,True,4,9,True,0.9391131901370331,3.804352068901062
+dann_disclr10,dann_disclr10,dann,True,8,13,True,0.9484263219328812,5.596984243392944
+cdan_disclr10,cdan_disclr10,cdan,True,6,11,True,0.9428255121092531,4.776597778002421
+dann,dann,dann,True,1,6,True,0.4417540718543731,2.501868466536204
+cdan,cdan,cdan,True,2,7,True,0.9026014338212981,3.2318099697430926
+dan_lambda0.1,dan_lambda0.1,dan,True,4,9,True,0.9398198630101694,4.652944135665893
+dan_lambda10,dan_lambda10,dan,True,1,6,True,0.05066996495567924,2.5699758529663086
