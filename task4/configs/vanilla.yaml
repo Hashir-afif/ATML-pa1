@@ -1,0 +1,3 @@
+run_name: vanilla
+method: vanilla
+# Closed-set baseline; its frozen logits/features feed all four post-hoc scores.

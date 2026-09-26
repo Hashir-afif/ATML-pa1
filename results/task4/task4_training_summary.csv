@@ -1,0 +1,4 @@
+config,method,best_epoch,epochs_run,best_val_acc,train_minutes,uses_cifar100
+vanilla,Vanilla,95,100,0.9526,47.26542975107829,False
+gcsc,GCSC,99,100,0.9568,99.74724258184433,False
+proser,PROSER,1,50,0.9486,23.239458894729616,False

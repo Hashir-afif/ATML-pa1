@@ -1,0 +1,26 @@
+# Shared Task 4 protocol (manual section 4). Method configs are merged on top of this file.
+seed: 6304
+data:
+  known: CIFAR-10 (HF mirror uoft-cs/cifar10), all 10 classes
+  unknowns: CIFAR-100 TEST split only (HF mirror uoft-cs/cifar100); 8 near + 8 far classes, 800 images per group
+  split: stratified 90/10 of the official CIFAR-10 training partition, seed 6304
+  input: 32x32 (original resolution)
+  augmentation: random 32x32 crop with 4-pixel padding + random horizontal flip
+  normalization: CIFAR-10 channel mean/std
+model:
+  arch: resnet18_cifar   # 3x3 stride-1 first conv, no initial max-pool
+  num_classes: 10
+  dummy_classifiers: 0
+train:
+  optimizer: SGD
+  lr: 0.1
+  momentum: 0.9
+  weight_decay: 0.0005
+  schedule: cosine
+  batch_size: 128
+  epochs: 100
+  checkpoint_rule: highest CIFAR-10 validation accuracy
+evaluation:
+  threshold_percentile: 95    # tau = 95th percentile of unknownness on CIFAR-10 VALIDATION only
+  scores: [msp, mls, energy, mahalanobis]
+  mahalanobis: {source: unaugmented CIFAR-10 training features, covariance: shared diagonal, epsilon: 1.0e-6}

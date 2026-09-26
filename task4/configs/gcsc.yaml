@@ -1,0 +1,5 @@
+run_name: gcsc
+method: gcsc
+# Vanilla recipe + RandAugment after crop/flip, before normalisation. Everything else unchanged.
+augmentation:
+  rand_augment: {num_ops: 2, magnitude: 9}

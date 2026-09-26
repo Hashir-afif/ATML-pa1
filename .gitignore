@@ -33,3 +33,14 @@ task3/cache/
 task3/results/_smoke/
 task3/results/_partial_nb/
 task3/results/run_*.log
+
+# Task 4 checkpoints, caches, smoke outputs, logs
+task4/checkpoints/
+task4/cache/
+task4/results/_smoke/
+task4/results/_partial_nb/
+task4/results/run_*.log
+
+# Overnight supervisor scaffolding (ephemeral; script self-deletes on success)
+overnight/
+tools/overnight_runner.sh

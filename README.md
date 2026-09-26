@@ -8,7 +8,7 @@ manual is `ATML-PA1.pdf`.
 | 1 | Inductive biases and feature representations (STL-10; ResNet-50, ViT-B/16, CLIP) | implemented |
 | 2 | Unsupervised domain adaptation (PACS → Sketch; Source-only, DAN, DANN, CDAN) | run (10 runs incl. failed and superseded DANN/CDAN variants; see task2/RUN_LOG.md) |
 | 3 | Domain generalization (PACS, Sketch unseen; ERM, DAN-DG, SAM) | run (DAN-DG λ≥1 collapses; see task3/RUN_LOG.md) |
-| 4 | Open-set recognition (CIFAR-10 known / CIFAR-100 near + far unknowns) | not started |
+| 4 | Open-set recognition (CIFAR-10 known / CIFAR-100 near + far unknowns) | implemented, smoke-tested; full training not yet run |
 
 ## Repository structure
 
@@ -18,7 +18,7 @@ task1/            notebooks 00-07, configs/, results/ (working copies), README.m
 shared/           PACS protocol, models, MMD, common training loop, evaluation (Tasks 2 + 3)
 task2/            notebooks 00-04, configs/, methods/, README.md
 task3/            notebooks 00-04, configs/, methods/, README.md, RUN_LOG.md
-task4/            (added when implemented)
+task4/            notebooks 00-04, configs/, methods/, models/, scores/, evaluation/, README.md, RUN_LOG.md
 results/
   task1/ ...      final machine-readable results per task (+ consolidated results.json)
   report.md       factual experiment log / evidence notebook (NOT the submitted report)
@@ -42,10 +42,11 @@ The raw datasets are not committed.
 
 - **STL-10** (Task 1): `stl10_binary.tar.gz` placed in `task1/data/` (MD5 `91f7769df0f17e558f3565bffb0c7dfb`); notebook 00 extracts it.
 - **PACS** (Tasks 2, 3): downloaded by `task2/00_prepare_pacs.ipynb` from the Hugging Face mirror `flwrlabs/pacs` (SHA-256 checked) into `data/pacs/`.
+- **CIFAR-10 / CIFAR-100** (Task 4): Hugging Face mirrors `uoft-cs/cifar10` (train + test) and `uoft-cs/cifar100` (**test only**) in `data/cifar/`; see [task4/README.md](task4/README.md).
 
 ## Running
 
-Each task has its own README with exact commands: [task1/README.md](task1/README.md), [task2/README.md](task2/README.md), [task3/README.md](task3/README.md).
+Each task has its own README with exact commands: [task1/README.md](task1/README.md), [task2/README.md](task2/README.md), [task3/README.md](task3/README.md), [task4/README.md](task4/README.md).
 
 ## Results
 

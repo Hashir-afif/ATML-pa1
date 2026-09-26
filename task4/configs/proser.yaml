@@ -1,0 +1,15 @@
+run_name: proser
+method: proser
+# Initialised from the selected Vanilla checkpoint; five dummy classifiers appended.
+init_from: vanilla
+model:
+  dummy_classifiers: 5
+train:
+  lr: 0.001
+  epochs: 50
+proser:
+  dummy_classifiers: 5
+  beta: 1.0                 # classifier-placeholder loss weight
+  gamma: 0.1                # data-placeholder loss weight
+  mixup_beta_alpha: 2.0     # lambda ~ Beta(2, 2), manifold mixup after layer2 / before layer3
+  batch_split: half classifier placeholders, half data placeholders

@@ -1,0 +1,79 @@
+{
+ "cifar10": {
+  "train": {
+   "n": 50000,
+   "per_class": [
+    5000,
+    5000,
+    5000,
+    5000,
+    5000,
+    5000,
+    5000,
+    5000,
+    5000,
+    5000
+   ],
+   "parquet_sha256": "8428b53a88a11ac374111006708df51469e315a22ac6d66470afd9c78d2ae883"
+  },
+  "test": {
+   "n": 10000,
+   "per_class": [
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000
+   ],
+   "parquet_sha256": "841389e6f2d64f28bf17310e430aebac20ec3ba611a3c5e231dc93c645ce84de"
+  }
+ },
+ "classes": [
+  "airplane",
+  "automobile",
+  "bird",
+  "cat",
+  "deer",
+  "dog",
+  "frog",
+  "horse",
+  "ship",
+  "truck"
+ ],
+ "split": {
+  "seed": 6304,
+  "n_train": 45000,
+  "n_val": 5000,
+  "file": "task4/results/tables/task4_cifar10_split.json"
+ },
+ "unknown_classes": {
+  "near": [
+   "bus",
+   "pickup_truck",
+   "motorcycle",
+   "tractor",
+   "wolf",
+   "fox",
+   "leopard",
+   "camel"
+  ],
+  "far": [
+   "bottle",
+   "bowl",
+   "chair",
+   "clock",
+   "keyboard",
+   "mushroom",
+   "sunflower",
+   "wardrobe"
+  ]
+ },
+ "cifar100_test_parquet_sha256": "98776c529bb146a9c791229df74a5cf076be9b43d82dbbd334b6a7788d73dc68",
+ "cifar100_train_downloaded": false,
+ "note": "CIFAR-100 images are not decoded until notebook 03 (after the freeze)."
+}

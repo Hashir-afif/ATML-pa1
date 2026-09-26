@@ -1,0 +1,4 @@
+config,model,cifar10_test_csa,val_acc_selected
+vanilla,Vanilla,0.9460999965667725,0.9526
+gcsc,GCSC,0.9542999863624573,0.9568
+proser,PROSER,0.9440000057220459,0.9486
